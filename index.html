@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Showcase — PARVATHY U R</title>
+  <meta name="description" content="Portfolio webpage of PARVATHY U R built using Flexbox and Grid.">
+  <style>
+    /* ====== Base ====== */
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#98a0b3; --accent:#7dd3fc; --glass: rgba(255,255,255,0.04);
+      --radius:12px; --gap:1.25rem; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:linear-gradient(180deg,#071021 0%,var(--bg) 100%); color:#eef2ff;
+      padding:2rem;
+    }
+    a{color:var(--accent); text-decoration:none}
+    .container{max-width:1100px; margin:0 auto; display:grid; gap:var(--gap)}
+    header{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+    .brand{display:flex; gap:.75rem; align-items:center}
+    .logo{
+      width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#60a5fa);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#04263a; font-size:24px;
+    }
+    nav a{margin-left:1rem;font-weight:600;color:var(--muted)}
+    nav a:hover{color:var(--accent)}
+    /* ====== Hero / Profile ====== */
+    .hero{
+      display:grid; grid-template-columns: 320px 1fr; gap:var(--gap); align-items:center;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      padding:1.25rem; border-radius:var(--radius);
+    }
+    .profile{
+      display:flex; flex-direction:column; gap:.75rem; align-items:center; text-align:center;
+      padding:1rem; background:var(--card); border-radius:10px;
+    }
+    .avatar{
+      width:160px; height:160px; border-radius:14px;
+      background:linear-gradient(180deg,#0ea5a0,#3b82f6);
+      display:flex; align-items:center; justify-content:center;
+      font-size:48px; font-weight:700; color:#001219;
+    }
+    .main-grid{display:grid; grid-template-columns: 1fr 360px; gap:var(--gap);}
+    section.card{background:var(--card); padding:1rem; border-radius:var(--radius);}
+    h2{margin:0 0 .5rem 0}
+    p.lead{color:var(--muted);}
+    .about{color:#dbeafe}
+    .hobbies{display:flex; gap:.5rem; flex-wrap:wrap}
+    .hobby{background:var(--glass); padding:.5rem .6rem; border-radius:10px; color:var(--muted); font-weight:600}
+    .gallery-grid{
+      display:grid; grid-template-columns: repeat(3,1fr); gap:.5rem;
+    }
+    .gallery-grid img{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:8px; cursor:pointer}
+    .skills{display:flex; gap:.5rem; flex-wrap:wrap}
+    .skill{flex:1 0 120px; background:rgba(255,255,255,0.03); padding:.6rem; border-radius:10px; text-align:center}
+    footer{display:flex; justify-content:space-between; color:var(--muted)}
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .main-grid{grid-template-columns:1fr}
+      .gallery-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:540px){
+      nav{display:none}
+      .gallery-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="brand">
+        <div class="logo">PU</div>
+        <div>
+          <div style="font-weight:800">PARVATHY U R</div>
+          <div style="font-size:.85rem;color:var(--muted)">Student • Creative</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero / Profile -->
+    <div class="hero">
+      <div class="profile">
+        <div class="avatar">PU</div>
+        <div class="meta">
+          <h1>Hi — I'm PARVATHY U R</h1>
+          <p class="lead">I am an engineering student.</p>
+        </div>
+      </div>
+
+      <section class="card" id="about">
+        <h2>About Me</h2>
+        <p class="about">
+          I am an engineering student who loves exploring creativity in different forms.
+          I enjoy building simple web pages, learning new concepts, and improving step by step.
+        </p>
+      </section>
+    </div>
+
+    <!-- Main grid -->
+    <div class="main-grid">
+      <main>
+
+        <section class="card" id="hobbies">
+          <h2>Hobbies</h2>
+          <div class="hobbies">
+            <div class="hobby">Drawing</div>
+            <div class="hobby">Singing</div>
+            <div class="hobby">Dancing</div>
+          </div>
+        </section>
+
+        <section class="card" id="gallery" style="margin-top:.75rem">
+          <h2>Gallery</h2>
+          <p class="lead">Replace these images later with your own.</p>
+          <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80" alt="">
+            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=81" alt="">
+            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=82" alt="">
+            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=83" alt="">
+            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=84" alt="">
+            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=85" alt="">
+          </div>
+        </section>
+
+      </main>
+
+      <aside>
+        <section class="card">
+          <h2>Skills</h2>
+          <div class="skills">
+            <div class="skill"><strong>Coding</strong><br><small style="color:var(--muted)">Basics</small></div>
+          </div>
+        </section>
+
+        <section class="card" id="contact" style="margin-top:.75rem">
+          <h2>Contact</h2>
+          <p class="lead">For doubts or help with publishing:</p>
+          <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+          <p style="color:var(--muted)">Or contact coordinators:<br>
+            Jithin: 8606027780<br>
+            Joshua: 7736932394
+          </p>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <div>Built with ❤️ by PARVATHY U R</div>
+      <div>Task 4 — Deadline: Nov 23</div>
+    </footer>
+
+  </div>
+
+<script>
+  document.querySelectorAll('.gallery-grid img').forEach(img=>{
+    img.addEventListener('click', ()=> window.open(img.src, '_blank'));
+  });
+</script>
+
+</body>
+</html>
